@@ -61,7 +61,7 @@ defmodule AuthSampleWeb.Router do
   scope "/", AuthSampleWeb do
     pipe_through [:browser, :require_authenticated_user]
 
-    get "/users/logout", UserSessionController, :delete
+    delete "/users/logout", UserSessionController, :delete
     get "/users/settings", UserSettingsController, :edit
     put "/users/settings/update_password", UserSettingsController, :update_password
     put "/users/settings/update_email", UserSettingsController, :update_email
