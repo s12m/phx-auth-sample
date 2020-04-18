@@ -2,9 +2,13 @@ version: '3'
 services:
   db:
     image: postgres:11.4-alpine
+    ports:
+      - 5432:5432
   web:
-    image: elixir:1.10.1-alpine
-    command: sh -c 'mix local.hex --force && mix phx.server'
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: mix phx.server
     links:
       - db
     ports: 

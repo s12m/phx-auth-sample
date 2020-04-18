@@ -1,9 +1,11 @@
-# AuthSample
+# AuthSample using phx_gen_auth
+
+[phx_gen_auth](https://hex.pm/packages/phx_gen_auth)
 
 To start your Phoenix server:
 
-  * Setup the project with `mix setup`
-  * Start Phoenix endpoint with `mix phx.server`
+  * Setup the project with `docker-compose run --rm web mix setup`
+  * Start Phoenix endpoint with `docker-compose up`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
